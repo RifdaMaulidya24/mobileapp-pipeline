@@ -1,0 +1,13 @@
+version: "3.9"
+services:
+  app:
+    build: .
+    container_name: mobileapp-container
+    ports:
+      - "3000:5173"
+    volumes:
+      - .:/app
+      - /app/node_modules
+    environment:
+      - NODE_ENV=development
+    command: npm run dev -- --host
