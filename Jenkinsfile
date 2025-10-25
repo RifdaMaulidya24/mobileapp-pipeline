@@ -24,6 +24,7 @@ pipeline {
         stage('Build Docker Image') {
             steps {
                 script {
+                    bat 'docker builder prune -af || true'
                     bat "docker build -t ${IMAGE_NAME}:${env.BUILD_NUMBER} ."
                 }
             }
@@ -49,3 +50,4 @@ pipeline {
         }
     }
 }
+
