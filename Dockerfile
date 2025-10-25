@@ -1,5 +1,5 @@
 # Gunakan image Node.js ringan
-FROM node:18-alpine
+FROM node:20-alpine
 
 # Tentukan folder kerja di container
 WORKDIR /app
@@ -21,3 +21,4 @@ EXPOSE 5173
 
 # Jalankan server development
 CMD ["npm", "run", "dev", "--", "--host"]
+
