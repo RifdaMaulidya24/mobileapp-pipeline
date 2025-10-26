@@ -1,8 +1,7 @@
 pipeline {
     agent any
     environment {
-        IMAGE_NAME = 'rifdamaulidya24/mobileapp'
-        REGISTRY = 'https://index.docker.io/v1/'
+        IMAGE_NAME = 'rifda788/mobileapp-pipeline'
         REGISTRY_CREDENTIALS = 'dockerhub-credentials'  // pastikan sesuai dengan yang kamu buat di Jenkins
     }
 
@@ -50,4 +49,5 @@ pipeline {
         }
     }
 }
+
 
